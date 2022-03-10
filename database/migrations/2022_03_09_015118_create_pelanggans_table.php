@@ -20,7 +20,7 @@ class CreatePelanggansTable extends Migration
             $table->integer('nomor_kwh');
             $table->string('nama_pelanggan');
             $table->text('alamat');
-            $table->foreignId('id_tarif');
+            $table->foreignId('tarif_id');
             $table->timestamps();
         });
     }

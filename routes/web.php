@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     TarifController,
-    AuthController
+    AuthController,
+    PelangganController,
 };
 
 /*
@@ -41,8 +42,8 @@ Route::group(['auth:sanctum'], function() {
         Route::post('/updatetarif/{id}', [TarifController::class, "update"])->name('updatetarif');
         Route::get('/edittarif/{id}', [TarifController::class, "show"])->name('edittarif');
         Route::get('/deletetarif/{id}', [TarifController::class, "delete"])->name('deletetarif');
-        //route nilai
-        Route::get('/nilai', function () {return view('nilai');})->name('nilai');
+        //route Pelanggan
+        Route::get('/pelanggan', [pelangganController::class, "index"])->name('pelanggan');
     });
     
 });

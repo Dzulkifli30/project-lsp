@@ -12,4 +12,8 @@ class Tarif extends Model
         'daya',
         'tarifperkwh',
     ];
+    public function pelanggan()
+    {
+    	return $this->hasMany('App\Models\Pelanggan');
+    }
 }
